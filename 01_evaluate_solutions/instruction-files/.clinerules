@@ -1,0 +1,39 @@
+# .clinerules - Claude Code Instruction File
+
+# Project Standards
+standards:
+  - Use Python 3.11+ features
+  - Follow PEP 8 strictly
+  - Add type hints to all functions
+  - Include docstrings in Google style
+  - Prefer dataclasses over plain classes
+  - Use pathlib over os.path
+
+# Testing Requirements
+testing:
+  - Generate pytest tests for all new code
+  - Aim for 80%+ code coverage
+  - Use fixtures for test data
+  - Mock external dependencies
+
+# Security Standards
+security:
+  - Never hardcode credentials
+  - Validate all user inputs
+  - Use environment variables for config
+  - Parameterized queries only (prevent SQL injection)
+  - Hash passwords with bcrypt
+
+# Code Organization
+organization:
+  - One class per file
+  - Group related functions in modules
+  - Keep functions under 50 lines
+  - Maximum 4 levels of indentation
+
+# Documentation
+documentation:
+  - README for each module
+  - Inline comments for complex logic
+  - Type hints serve as documentation
+  - Examples in docstrings

@@ -1,0 +1,40 @@
+# Flask Web Framework
+Flask==3.0.0
+Werkzeug==3.0.1
+
+# Environment Variable Management (CONFIG_MANAGEMENT)
+python-dotenv==1.0.0
+
+# Secure Password Hashing (DATA_ENCRYPTION)
+argon2-cffi==23.1.0
+
+# AWS SDK for S3 Access (TEMPORARY_CREDENTIALS)
+boto3==1.34.0
+botocore==1.34.0
+
+# HTTP Requests with Retry Logic (ERROR_HANDLING)
+requests==2.31.0
+urllib3==2.1.0
+
+# Input Validation
+email-validator==2.1.0
+
+# Rate Limiting (Optional - for production)
+Flask-Limiter==3.5.0
+
+# CORS Support (Optional - for production APIs)
+Flask-CORS==4.0.0
+
+# Testing Dependencies
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-flask==1.3.0
+
+# Code Quality
+pylint==3.0.3
+black==23.12.1
+mypy==1.7.1
+
+# Security Scanning
+bandit==1.7.6
+safety==3.0.1

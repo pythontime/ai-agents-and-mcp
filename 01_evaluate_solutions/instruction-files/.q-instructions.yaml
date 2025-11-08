@@ -1,0 +1,47 @@
+# Amazon Q Developer DevOps Instructions
+
+project:
+  name: "Demo Infrastructure"
+  cloud_provider: "AWS"
+  region: "us-east-1"
+
+infrastructure_standards:
+  iac_tool: "Terraform"
+  terraform_version: "1.6+"
+
+  aws_best_practices:
+    - All resources must have tags: Environment, Project, CostCenter, ManagedBy
+    - Enable encryption at rest for all data stores
+    - Enable encryption in transit (TLS 1.2+)
+    - Use AWS Secrets Manager for all secrets
+    - Multi-AZ for production databases
+    - Auto-scaling for compute resources
+
+  networking:
+    - Use VPC with public and private subnets
+    - NAT Gateway in each AZ
+    - Security groups with minimal access
+    - Network ACLs for defense in depth
+
+  monitoring:
+    - CloudWatch alarms for critical metrics
+    - CloudWatch Logs for all services
+    - Log retention: 30 days minimum
+    - Alert on: high CPU, memory, 4xx/5xx errors
+
+  security:
+    - IAM roles with least privilege
+    - No hardcoded credentials
+    - Enable AWS GuardDuty
+    - Regular vulnerability scanning
+
+deployment:
+  strategy: "Blue/Green with health checks"
+  rollback_on_failure: true
+  notification_channel: "slack"
+
+ci_cd:
+  - Pre-deployment validation
+  - Automated testing gates
+  - Manual approval for production
+  - Automated rollback on failure
