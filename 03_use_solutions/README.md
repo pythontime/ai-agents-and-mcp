@@ -17,13 +17,21 @@ Show Claude Code and Amazon Q Developer CLI in action across different developme
 
 ## Directory Structure
 ```
-demo-2-evaluating-agent-solutions/
+03_use_solutions/
 ├── README.md                    # This file
-├── demo-script.md               # Step-by-step presentation guide
-├── instruction-files/           # .clinerules and .q-instructions.yaml
-├── legacy-app/                  # Sample app with security issues
-├── sample-outputs/              # Pre-generated outputs
-└── scripts/                     # Generated deployment scripts
+├── SECURITY-COMPARISON.md       # Detailed security analysis comparison
+├── legacy-app-vulnerable/       # Original app with security vulnerabilities
+│   ├── app.py                   # Flask application with security issues
+│   ├── models.py                # Database models (vulnerable)
+│   ├── utils.py                 # Utility functions (insecure)
+│   └── README.md                # Documentation of vulnerabilities
+└── legacy-app-secure/           # Secured version of the application
+    ├── app.py                   # Hardened Flask application
+    ├── models.py                # Secure database models
+    ├── utils.py                 # Secure utility functions
+    ├── requirements.txt         # Python dependencies
+    ├── .env.example             # Environment configuration template
+    └── README.md                # Security improvements documentation
 ```
 
 ## Key Demonstrations
