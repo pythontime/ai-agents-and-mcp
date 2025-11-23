@@ -1,0 +1,11 @@
+Generate an application according to the following specifications:
+1) read the rules in ~/.aws/amazonq/rules/ (all files in the directory structure) and use them for this conversation
+2) the app runs in the current directory, listening on port 8080
+3) the app uses the static diffusion model to generate images from a prompt, stored in ./model/
+4) before downloading any model, check the ./model/ directory to see if there is a previous cached copy
+5) ensure the app can use the local GPU
+6) the app has a well-designed web front end with many parameters that can be customized using the form
+7) while generating images, leave any previously generated images on the page during generation
+8) provide an option to download generated images
+9) use the front-end mcp to identify and follow best practices
+10) test the application programmatically at each step to validate functionality

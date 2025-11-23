@@ -1,0 +1,1 @@
+Analyze the png diagram in the current directory, then use the aws pricing mcp to estimate persistent charges that would result from implementation. Also identify variable costs with sample values that would be consistent with development use, and create a markdown report of the analysis.

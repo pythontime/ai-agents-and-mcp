@@ -40,3 +40,4 @@ terraform.rc
 
 # Claude Code configuration
 .claude/
+.model/

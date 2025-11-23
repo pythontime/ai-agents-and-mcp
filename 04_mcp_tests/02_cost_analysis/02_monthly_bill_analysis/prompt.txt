@@ -1,0 +1,1 @@
+Use the aws cost explorer mcp to generate a report with visualizations for the past 3 months of aws charges. The visualizations should include top 10 services, biggest variations, and which services have consistent, recurring charges.

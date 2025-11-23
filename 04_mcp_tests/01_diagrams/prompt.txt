@@ -1,0 +1,5 @@
+Design an AWS three-tier architecture that consists of the following:
+1) a layer 7 load balancer with a secure listener
+2) application runtime using node.js in auto-scaled Docker containers
+3) a highly available postgres database
+Use cloud-native architecture principles, and when finished, generate a visualization using the aws official icon set. The diagram should be detailed and account for the AWS features in use.
