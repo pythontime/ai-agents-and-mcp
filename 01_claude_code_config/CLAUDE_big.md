@@ -404,6 +404,7 @@ This rule ensures consistent Infrastructure as Code practices (Terraform, CloudF
 - MUST run formatting tools (terraform fmt, etc.) before commits. (ID: FORMAT_BEFORE_COMMIT)
 - SHOULD implement remote state management with locking for team environments. (ID: STATE_MANAGEMENT)
 - MUST validate and preview changes before applying. (ID: VALIDATE_PLAN)
+- MUST use the latest stable provider version, and verify this with MCP (ID: PROVIDER_VERSION)
 
 ## Priority
 High
