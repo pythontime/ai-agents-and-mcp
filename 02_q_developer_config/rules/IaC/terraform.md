@@ -11,6 +11,7 @@ This rule ensures consistent Terraform practices and code quality standards.
 - MUST execute `terraform fmt` before any code commit to ensure consistent formatting and style. (ID: TERRAFORM_FMT)
 - MUST implement remote state management with state locking to prevent concurrent modifications. (ID: REMOTE_STATE)
 - MUST use terraform validate and terraform plan before any apply operations. (ID: VALIDATE_PLAN)
+- MUST use the latest stable provider version, and verify this with MCP (ID: PROVIDER_VERSION)
 
 ## Priority
 High
