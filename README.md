@@ -1,10 +1,10 @@
 # AI Agents and MCP Training Repository
 
-A comprehensive training repository demonstrating the configuration, usage, and comparison of AI development agents (Claude Code and Amazon Q Developer) with Model Context Protocol (MCP) server integration. This repository serves as both a learning resource and a practical reference for implementing AI-assisted development workflows with security-first practices.
+A comprehensive training repository demonstrating the configuration, usage, and comparison of AI development agents (Claude Code and Kiro) with Model Context Protocol (MCP) server integration. This repository serves as both a learning resource and a practical reference for implementing AI-assisted development workflows with security-first practices.
 
 ## Overview
 
-This repository provides hands-on training materials for working with AI development agents, specifically Claude Code and Amazon Q Developer, integrated with Model Context Protocol (MCP) servers. It demonstrates how to configure, customize, and leverage these agents for secure, efficient software development across multiple domains including application development, infrastructure as code, and DevOps automation.
+This repository provides hands-on training materials for working with AI development agents, specifically Claude Code and Kiro, integrated with Model Context Protocol (MCP) servers. It demonstrates how to configure, customize, and leverage these agents for secure, efficient software development across multiple domains including application development, infrastructure as code, and DevOps automation.
 
 **Technology Stack:**
 - **Languages**: Python 3.8+, Terraform (HCL), Markdown, JSON
@@ -13,17 +13,17 @@ This repository provides hands-on training materials for working with AI develop
 - **Testing**: Pytest with coverage reporting
 - **Code Quality**: Pylint, Black, MyPy
 - **Cloud**: AWS (S3, Lambda) with boto3 SDK
-- **AI Agents**: Claude Code CLI, Amazon Q Developer CLI
+- **AI Agents**: Claude Code CLI, Kiro CLI
 - **MCP Servers**: AWS Diagram, AWS Pricing, Terraform, Documentation Generation
 
 ## Features
 
-- **Structured Rule Systems**: Comprehensive, priority-based development rules for both Claude Code and Amazon Q Developer with unique identifiers for tracking and compliance
+- **Structured Rule Systems**: Comprehensive, priority-based development rules for both Claude Code and Kiro with unique identifiers for tracking and compliance
 - **MCP Server Integration**: Practical examples demonstrating diagram generation, cost analysis, pricing estimation, and automated documentation workflows
 - **Security-First Development**: Guidelines and real-world examples for secure coding practices including input validation, secure password hashing, and least-privilege access control
 - **Legacy Application Hardening**: Before/after demonstrations of securing vulnerable Flask applications with detailed security comparison analysis
 - **Infrastructure as Code**: Terraform best practices with multi-file coordination, linting (tflint), and security scanning (checkov)
-- **AI Agent Comparison**: Side-by-side evaluation framework showing when to use Claude Code vs Amazon Q Developer for different tasks
+- **AI Agent Comparison**: Side-by-side evaluation framework showing when to use Claude Code vs Kiro for different tasks
 - **Cost Analysis Tools**: AWS architecture visualization with cost estimation and monthly bill analysis examples
 - **Automated Documentation**: Workflows for generating comprehensive project documentation using MCP servers
 
@@ -39,7 +39,7 @@ This repository provides hands-on training materials for working with AI develop
 - **Python**: Version 3.8 or higher with virtual environment support
 - **AI Agent CLIs**: 
   - Claude Code CLI installed and configured
-  - Amazon Q Developer CLI installed and configured
+  - Kiro CLI installed and configured
 - **Version Control**: Git for repository management
 - **Editor**: Text editor or IDE with Markdown support (VS Code recommended)
 - **Optional Tools**:
@@ -63,10 +63,10 @@ Structured instruction files that define how Claude Code should approach develop
 - Terraform-specific best practices
 - Change management workflows
 
-#### Amazon Q Developer Configuration (`02_q_developer_config/`)
-Priority-based rule system organized by domain for systematic application:
+#### Kiro Configuration (`02_kiro_config/`)
+Priority-based steering system organized by domain for systematic application:
 
-**Rule Categories** (`rules/` directory):
+**Steering Categories** (`steering/` directory):
 - **Security** (`security/`): Access control (least privilege), data management (encryption, validation), compliance requirements
 - **Development** (`development/`): Python virtual environments, error handling, logging, performance optimization, deployment testing, Lambda development
 - **Infrastructure** (`IaC/`): Terraform best practices, cost estimation, provider version management
@@ -150,13 +150,13 @@ python3 --version  # Should be 3.8 or higher
 
 ### 2. Configure AI Agents
 
-**For Amazon Q Developer:**
+**For Kiro:**
 ```bash
-# Rules are automatically loaded from ~/.kiro/steering/
-# Copy example rules to your configuration directory
-cp -r 02_q_developer_config/rules/* ~/.kiro/steering/
+# Steering files are automatically loaded from ~/.kiro/steering/
+# Copy example steering files to your configuration directory
+cp -r 02_kiro_config/steering/* ~/.kiro/steering/
 
-# Verify rules are loaded
+# Verify steering files are loaded
 ls ~/.kiro/steering/
 ```
 
@@ -205,13 +205,13 @@ aws configure --profile training
 
 ### Using the Rule Systems
 
-**Amazon Q Developer with Rules:**
+**Kiro with Steering:**
 ```bash
-# Rules are automatically applied from ~/.kiro/steering/
-# Start a conversation and rules will be consulted
+# Steering files are automatically applied from ~/.kiro/steering/
+# Start a conversation and steering will be consulted
 
-# Example: Ask Q to create a Lambda function
-# Q will automatically apply rules for:
+# Example: Ask Kiro to create a Lambda function
+# Kiro will automatically apply steering for:
 # - Python virtual environment (PYTHON_VENV_REQUIRED)
 # - Error handling (ERROR_HANDLING)
 # - Least privilege IAM (LEAST_PRIVILEGE)
@@ -313,8 +313,8 @@ ai-agents-and-mcp/
 │   ├── CLAUDE_big.md               # Comprehensive development guidelines
 │   └── terraform-CLAUDE.md         # Terraform-specific instructions
 │
-├── 02_q_developer_config/          # Amazon Q Developer rule system
-│   └── rules/                      # Organized by domain
+├── 02_kiro_config/                 # Kiro steering system
+│   └── steering/                   # Organized by domain
 │       ├── security/               # Access control, data management
 │       ├── development/            # Python, error handling, testing
 │       ├── IaC/                    # Terraform, cost estimation
@@ -606,7 +606,7 @@ ps aux | grep terraform
 ### Getting Help
 
 **Documentation Resources:**
-- Review rule documentation in `02_q_developer_config/rules/README.md`
+- Review steering documentation in `02_kiro_config/steering/README.md`
 - Check secure application example in `03_use_solutions/legacy-app-secure/README.md`
 - Consult security comparison in `03_use_solutions/SECURITY-COMPARISON.md`
 - Reference MCP server documentation for integration issues
