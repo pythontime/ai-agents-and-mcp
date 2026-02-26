@@ -1,5 +1,5 @@
 Generate an application according to the following specifications:
-1) read the rules in ~/.aws/amazonq/rules/ (all files in the directory structure) and use them for this conversation
+1) read the rules in ~/.kiro/steering/ (all files in the directory structure) and use them for this conversation
 2) the app runs in the current directory, listening on port 8080
 3) the app uses the static diffusion model to generate images from a prompt, stored in ./model/
 4) before downloading any model, check the ./model/ directory to see if there is a previous cached copy

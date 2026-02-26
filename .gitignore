@@ -40,4 +40,8 @@ terraform.tfvars
 *.env
 
 # Claude Code configuration
-model/
+model/*
+tmp/
+.kiro/
+.vscode/
+.claude/
